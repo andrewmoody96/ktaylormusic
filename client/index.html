@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ewert&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+      rel="stylesheet"
+    />
+    <!-- replace during rebuild -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              noto: ["Noto Serif", "serif"],
+              ewert: ["Ewert", "serif"],
+              caveat: ["Caveat", "cursive"],
+            },
+          },
+          screens: {
+            tablet: "760px",
+            desktop: "950px",
+            wide: "1200px",
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/8c50fad431.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Kolten Taylor</title>
+  </head>
+  <body class="bg-black text-white font-noto">
+    <header class="tablet:flex justify-center items-center">
+      <h1
+        class="tablet:w-[33vw] text-3xl text-center text-white mt-4 font-ewert"
+      >
+        Kolten Taylor<br /><span class="text-xl font-caveat"
+          >& the Truck Toppers</span
+        >
+      </h1>
+      <div class="tablet:w-[33vw] m-auto"> 
+        <img
+          class="w-[8vw] h-auto m-auto"
+          src="./media/Kolten Taylor-16.jpg"
+          alt="Kolten Taylor & The Truck Toppers"
+        />
+      </div>
+      <!-- <div class="hidden tablet:block w-[33vw]"></div>
+      <div
+        class="tablet:hidden w-[98vw] bg-white h-[2px] text-center m-2"
+      ></div> -->
+      <nav class="tablet:w-[33vw] text-center m-auto">
+        <button class="p-2 m-2 hover:text-red-600">
+          <a href="#about">About</a>
+        </button>
+        <button class="p-2 m-2 hover:text-red-600">
+          <a href="#shows">Calendar</a>
+        </button>
+        <button class="p-2 m-2 hover:text-red-600">
+          <a href="#contact">Contact</a>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <img
+        class="m-auto w-[100vw] h-[85vh]"
+        src="./media/coverPhoto.jpg"
+        alt="Kolten Taylor & The Truck Toppers"
+      />
+      <section
+        id="about"
+        class="text-center text-[0.8rem] tablet:text-[1rem] m-2 mb-10 w-[60vw] mx-auto flex flex-col tablet:flex-row tablet:justify-center tablet:items-center"
+      >
+        <div class="slideshow-container mx-10">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 6</div>
+            <img
+              class="w-[100%]"
+              src="./media/kt1.jpeg"
+              alt="Kolten Taylor & The Truck Toppers"
+            />
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 6</div>
+            <img
+              class="w-[100%]"
+              src="./media/tt1.jpg"
+              alt="Kolten Taylor & The Truck Toppers"
+            />
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 6</div>
+            <img
+              class="w-[100%]"
+              src="./media/kt3.jpg"
+              alt="Kolten Taylor & The Truck Toppers"
+            />
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 6</div>
+            <img
+              class="w-[100%]"
+              src="./media/zd1.jpg"
+              alt="Kolten Taylor & The Truck Toppers"
+            />
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 6</div>
+            <img
+              class="w-[100%]"
+              src="./media/kt2.jpg"
+              alt="Kolten Taylor & The Truck Toppers"
+            />
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">6 / 6</div>
+            <img
+              class="w-[100%]"
+              src="./media/tt2.jpg"
+              alt="Kolten Taylor & The Truck Toppers"
+            />
+          </div>
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <!-- The dots/circles -->
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+          </div>
+        </div>
+        <p class="tablet:w-[50%] m-2 mx-10 tablet:mx-auto">
+          <span
+            class="text-center text-[1.2rem] tablet:text-[2rem] m-2 underline"
+            >About Kolten</span
+          ><br />
+          Born in the small town of Ogden, IL, Kolten found his passion for
+          music in his late teens. He started writing country with friends and
+          performing as a solo act around Champaign/Urbana and has opened for
+          Alex Williams. After filling out the band in early 2022, including
+          Nashville guitarist Zach Dable, Kolten Taylor & the Truck Toppers
+          began performing full shows. Kolten released his debut EP "Ain't No
+          Cowboy" later that year, followed by a single "Raining Whiskey."
+          Kolten continues to perform around Illinois and Indiana.
+        </p>
+      </section>
+      <section
+        id="shows"
+        class="text-center text-[0.8rem] tablet:text-[1rem] m-2 mb-10 w-[60vw] mx-auto flex flex-col tablet:flex-row tablet:justify-center tablet:items-center"
+      >
+        <div class="tablet:w-[50%] m-2 mx-10 tablet:mx-auto">
+          <span
+            class="text-center text-[1.2rem] tablet:text-[2rem] m-2 underline"
+            >Upcoming Shows</span
+          >
+          <ul
+            class="text-[1rem] m-auto grid grid-cols-1 w-[85vw] tablet:w-[20vw]"
+          >
+            <li
+              class="bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)]"
+            >
+              Aug 10 @ 5PM<br />IL State Fair<br />Apex Stage<br />Springfield,
+              IL
+            </li>
+            <li
+              class="bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)]"
+            >
+              Aug 18 @ 2PM<br />Alto Vineyards<br />Sunday Winedown<br />Champaign,
+              IL
+            </li>
+            <li
+              class="bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)]"
+            >
+              Aug 24<br />Ogden Street Fest<br />Ogden, IL
+            </li>
+            <li
+              class="bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)]"
+            >
+              Sep 1 @ 7PM<br />Exit 210 Saloon<br />Oakwood, IL
+            </li>
+            <li
+              class="bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)]"
+            >
+              Sep 7 @ 6PM<br />Thirty-Six Saloon<br />Rockville, IN
+            </li>
+            <li
+              class="bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)]"
+            >
+              Sep 20 @ 8PM<br />Bargenta<br />Argenta, IL
+            </li>
+          </ul>
+        </div>
+        <div class="video-container mx-10">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/G7Phjg46vls?si=XgFQzN_TLn0rMDR5?autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <section
+        id="contact"
+        class="text-center text-[0.8rem] tablet:text-[1rem] m-2 mb-20"
+      >
+        <span class="text-center text-[1.2rem] tablet:text-[2rem] m-2 underline"
+          >Booking & Contact</span
+        ><br />
+        Kolten Taylor: <a href="tel:217-714-0406">217-714-0406</a><br />
+        Zach Dable: <a href="tel:217-474-5617">217-474-5617</a><br />
+        Perry Dable: <a href="tel:217-497-5393">217-497-5393</a><br />
+        Email: <a href="mailto:kttoppers22@gmail.com">kttoppers22@gmail.com</a>
+      </section>
+    </main>
+    <footer
+      class="bg-black mt-4 fixed bottom-0 left-0 right-0 text-center text-xl text-white"
+    >
+      <div class="m-2">
+        <a
+          aria-label="{null}"
+          href="https://www.facebook.com/koltentaylormusic/"
+          title="Link to Facebook"
+          target="_blank"
+          rel="noreferrer"
+          className="text-base hover:text-red-600"
+          ><i class="m-2 fa-brands fa-facebook"></i
+        ></a>
+        <a
+          aria-label="{null}"
+          href="https://www.instagram.com/koltentaylormusic/"
+          title="Link to Instagram"
+          target="_blank"
+          rel="noreferrer"
+          className="text-base hover:text-red-600"
+          ><i class="m-2 fa-brands fa-instagram"></i
+        ></a>
+        <a
+          aria-label="{null}"
+          href="https://open.spotify.com/artist/459IGqkCyK2LRXB9tbIibA?si=jI69ME31SOimIsA91DUdeg"
+          title="Link to Spotify"
+          target="_blank"
+          rel="noreferrer"
+          className="text-base hover:text-red-600"
+          ><i class="m-2 fa-brands fa-spotify"></i
+        ></a>
+        <a
+          aria-label="{null}"
+          href="https://music.apple.com/us/artist/kolten-taylor/1651361900"
+          title="Link to Apple Music"
+          target="_blank"
+          rel="noreferrer"
+          className="text-base hover:text-red-600"
+          ><i class="m-2 fa-brands fa-apple"></i
+        ></a>
+        <a
+          aria-label="{null}"
+          href="https://www.youtube.com/channel/UCoXu2AVaWPb-3XnpU85QvbQ"
+          title="Link to YouTube"
+          target="_blank"
+          rel="noreferrer"
+          className="text-base hover:text-red-600"
+          ><i class="m-2 fa-brands fa-youtube"></i
+        ></a>
+        <a
+          aria-label="{null}"
+          href="https://music.amazon.com/artists/B0BKFRML2T/kolten-taylor"
+          title="Link to Amazon Music"
+          target="_blank"
+          rel="noreferrer"
+          className="text-base hover:text-black"
+          ><i class="m-2 fa-brands fa-amazon"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>
