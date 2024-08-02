@@ -6,10 +6,9 @@
 - Contact Info
 - Links to Music & Socials
 
-### IN THIS COMMIT (7/30/2024):
-- added photo slideshow
-- embeded YouTube video
-- added logo to Header
-- added anchors to Footer icons
-- added bio
-- added tel: & mailto: to contact section
+### IN THIS COMMIT (8/1/2024):
+- mobile layout complete
+- added stageplot download link (waiting on public Drive link from band)
+- added CSS to maintain 16:9 aspect ratio across different screens
+- polished with additional CSS (shadows, borders, etc)
+- switched to automatic photo gallery

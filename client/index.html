@@ -37,18 +37,18 @@
     ></script>
     <title>Kolten Taylor</title>
   </head>
-  <body class="bg-black text-white font-noto">
-    <header class="tablet:flex justify-center items-center">
+  <body class="bg-black text-white font-noto w-[100vw] overflow-x-hidden">
+    <header class="flex justify-center items-center">
       <h1
-        class="tablet:w-[33vw] text-3xl text-center text-white mt-4 font-ewert"
+        class="hidden tablet:block tablet:w-[33vw] text-3xl text-center text-white mt-4 font-ewert"
       >
         Kolten Taylor<br /><span class="text-xl font-caveat"
           >& the Truck Toppers</span
         >
       </h1>
-      <div class="tablet:w-[33vw] m-auto"> 
+      <div class="tablet:w-[33vw] tablet:m-auto">
         <img
-          class="w-[8vw] h-auto m-auto"
+          class="w-[20vw] tablet:w-[10vw] h-auto tablet:m-auto"
           src="./media/Kolten Taylor-16.jpg"
           alt="Kolten Taylor & The Truck Toppers"
         />
@@ -58,30 +58,39 @@
         class="tablet:hidden w-[98vw] bg-white h-[2px] text-center m-2"
       ></div> -->
       <nav class="tablet:w-[33vw] text-center m-auto">
-        <button class="p-2 m-2 hover:text-red-600">
+        <button class="p-2 m-2 hover:text-[#d6445a]">
           <a href="#about">About</a>
         </button>
-        <button class="p-2 m-2 hover:text-red-600">
+        <button class="p-2 m-2 hover:text-[#d6445a]">
           <a href="#shows">Calendar</a>
         </button>
-        <button class="p-2 m-2 hover:text-red-600">
+        <button class="p-2 m-2 hover:text-[#d6445a]">
           <a href="#contact">Contact</a>
         </button>
       </nav>
     </header>
-    <main>
-      <img
-        class="m-auto w-[100vw] h-[85vh]"
-        src="./media/coverPhoto.jpg"
-        alt="Kolten Taylor & The Truck Toppers"
-      />
+    <main class="flex flex-col justify-center items-center">
+      <div class="relative mb-4">
+        <img
+          class="m-auto w-[100vw] h-auto tablet:w-[100vw] tablet:h-[85vh]"
+          src="./media/coverPhoto.jpg"
+          alt="Kolten Taylor & The Truck Toppers"
+        />
+        <h1
+          class="img-text absolute top-[25%] left=[50%] tablet:hidden w-[100vw] text-3xl text-center text-white font-ewert"
+        >
+          Kolten Taylor<br /><span class="text-xl font-caveat"
+            >& the Truck Toppers</span
+          >
+        </h1>
+      </div>
       <section
         id="about"
-        class="text-center text-[0.8rem] tablet:text-[1rem] m-2 mb-10 w-[60vw] mx-auto flex flex-col tablet:flex-row tablet:justify-center tablet:items-center"
+        class="text-center text-[0.8rem] tablet:text-[1rem] mb-10 w-[100vw] tablet:w-[60vw] mx-4 flex flex-col tablet:flex-row justify-center items-center"
       >
-        <div class="slideshow-container mx-10">
+        <div class="slideshow-container mx-10 mb-4 w-[75vw]">
           <div class="mySlides fade">
-            <div class="numbertext">1 / 6</div>
+            <div class="hidden tablet:block numbertext">1 / 6</div>
             <img
               class="w-[100%]"
               src="./media/kt1.jpeg"
@@ -89,7 +98,7 @@
             />
           </div>
           <div class="mySlides fade">
-            <div class="numbertext">2 / 6</div>
+            <div class="hidden tablet:block numbertext">2 / 6</div>
             <img
               class="w-[100%]"
               src="./media/tt1.jpg"
@@ -97,7 +106,7 @@
             />
           </div>
           <div class="mySlides fade">
-            <div class="numbertext">3 / 6</div>
+            <div class="hidden tablet:block numbertext">3 / 6</div>
             <img
               class="w-[100%]"
               src="./media/kt3.jpg"
@@ -105,7 +114,7 @@
             />
           </div>
           <div class="mySlides fade">
-            <div class="numbertext">4 / 6</div>
+            <div class="hidden tablet:block numbertext">4 / 6</div>
             <img
               class="w-[100%]"
               src="./media/zd1.jpg"
@@ -113,7 +122,7 @@
             />
           </div>
           <div class="mySlides fade">
-            <div class="numbertext">5 / 6</div>
+            <div class="hidden tablet:block numbertext">5 / 6</div>
             <img
               class="w-[100%]"
               src="./media/kt2.jpg"
@@ -121,53 +130,68 @@
             />
           </div>
           <div class="mySlides fade">
-            <div class="numbertext">6 / 6</div>
+            <div class="hidden tablet:block numbertext">6 / 6</div>
             <img
               class="w-[100%]"
               src="./media/tt2.jpg"
               alt="Kolten Taylor & The Truck Toppers"
             />
           </div>
-          <!-- Next and previous buttons -->
+          <!-- Next and previous buttons
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
           <!-- The dots/circles -->
-          <div style="text-align: center">
+          <!-- <div style="text-align: center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
             <span class="dot" onclick="currentSlide(5)"></span>
             <span class="dot" onclick="currentSlide(6)"></span>
-          </div>
+          </div> -->
         </div>
-        <p class="tablet:w-[50%] m-2 mx-10 tablet:mx-auto">
+        <p class="w-[100vw] tablet:w-[50%] p-2 mx-10 tablet:mx-auto">
           <span
             class="text-center text-[1.2rem] tablet:text-[2rem] m-2 underline"
             >About Kolten</span
           ><br />
-          Born in the small town of Ogden, IL, Kolten found his passion for
-          music in his late teens. He started writing country with friends and
-          performing as a solo act around Champaign/Urbana and has opened for
-          Alex Williams. After filling out the band in early 2022, including
-          Nashville guitarist Zach Dable, Kolten Taylor & the Truck Toppers
-          began performing full shows. Kolten released his debut EP "Ain't No
-          Cowboy" later that year, followed by a single "Raining Whiskey."
-          Kolten continues to perform around Illinois and Indiana.
+          Kolten Taylor brings a combination of country and rock to his writing.
+          Rooted in outlaw country, Taylor draws inspiration from his
+          experiences as a blue-collar worker, observations of the world around
+          him, and country living. While attending college in Champaign-Urbana,
+          Taylor picked up the guitar and began writing with his close friends
+          and family. This evolved into a fully-fledged recording and regional
+          act. His two latest singles are the first to feature the full band
+          including Nashville guitarist Zach Dable. “Neon Glow” and “Good Time
+          Bad” mark the start of this duo's dynamic writing and production
+          partnership. Taylor has had the privilege to open for artists like
+          Noah Hicks, Jason Boland, Alex Williams, and Huser Brother Band.
+          Taylor's authentic and heartfelt lyrics resonate deeply with
+          listeners, capturing audiences with relatability and the band’s raw
+          performances.
         </p>
       </section>
       <section
         id="shows"
-        class="text-center text-[0.8rem] tablet:text-[1rem] m-2 mb-10 w-[60vw] mx-auto flex flex-col tablet:flex-row tablet:justify-center tablet:items-center"
+        class="text-center text-[0.8rem] tablet:text-[1rem] m-2 w-[50vw] flex flex-col tablet:flex-row justify-center items-center"
       >
-        <div class="tablet:w-[50%] m-2 mx-10 tablet:mx-auto">
+        <div class="video-container mx-10 mb-4">
+          <iframe
+            class="w-[85vw] tablet:w-[50vw]"
+            src="https://www.youtube.com/embed/G7Phjg46vls?si=XgFQzN_TLn0rMDR5?autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="tablet:w-[50%] m-2 tablet:mx-auto">
           <span
             class="text-center text-[1.2rem] tablet:text-[2rem] m-2 underline"
             >Upcoming Shows</span
           >
-          <ul
-            class="text-[1rem] m-auto grid grid-cols-1 w-[85vw] tablet:w-[20vw]"
-          >
+          <ul class="text-[1rem] grid grid-cols-1 w-[75vw] tablet:w-[20vw]">
             <li
               class="bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)]"
             >
@@ -202,18 +226,6 @@
             </li>
           </ul>
         </div>
-        <div class="video-container mx-10">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/G7Phjg46vls?si=XgFQzN_TLn0rMDR5?autoplay=1&mute=1"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
       </section>
       <section
         id="contact"
@@ -225,7 +237,17 @@
         Kolten Taylor: <a href="tel:217-714-0406">217-714-0406</a><br />
         Zach Dable: <a href="tel:217-474-5617">217-474-5617</a><br />
         Perry Dable: <a href="tel:217-497-5393">217-497-5393</a><br />
-        Email: <a href="mailto:kttoppers22@gmail.com">kttoppers22@gmail.com</a>
+        Email: <a href="mailto:kttoppers22@gmail.com">kttoppers22@gmail.com</a><br />
+        <br />
+        <br />
+        <a
+          aria-label="{null}"
+          href="https://www.facebook.com/koltentaylormusic/"
+          title="Download Stageplot"
+          target="_blank"
+          rel="noreferrer"
+          ><span class="text-lg hover:text-[#d6445a]"><i class="m-2 fa-regular fa-file-pdf hover:text-[#d6445a]"></i
+            >Download Stageplot</span></a>
       </section>
     </main>
     <footer
@@ -238,8 +260,8 @@
           title="Link to Facebook"
           target="_blank"
           rel="noreferrer"
-          className="text-base hover:text-red-600"
-          ><i class="m-2 fa-brands fa-facebook"></i
+          className="text-base"
+          ><i class="m-2 fa-brands fa-facebook hover:text-[#d6445a]"></i
         ></a>
         <a
           aria-label="{null}"
@@ -247,8 +269,8 @@
           title="Link to Instagram"
           target="_blank"
           rel="noreferrer"
-          className="text-base hover:text-red-600"
-          ><i class="m-2 fa-brands fa-instagram"></i
+          className="text-base"
+          ><i class="m-2 fa-brands fa-instagram hover:text-[#d6445a]"></i
         ></a>
         <a
           aria-label="{null}"
@@ -256,8 +278,8 @@
           title="Link to Spotify"
           target="_blank"
           rel="noreferrer"
-          className="text-base hover:text-red-600"
-          ><i class="m-2 fa-brands fa-spotify"></i
+          className="text-base"
+          ><i class="m-2 fa-brands fa-spotify hover:text-[#d6445a]"></i
         ></a>
         <a
           aria-label="{null}"
@@ -265,8 +287,8 @@
           title="Link to Apple Music"
           target="_blank"
           rel="noreferrer"
-          className="text-base hover:text-red-600"
-          ><i class="m-2 fa-brands fa-apple"></i
+          className="text-base"
+          ><i class="m-2 fa-brands fa-apple hover:text-[#d6445a]"></i
         ></a>
         <a
           aria-label="{null}"
@@ -274,8 +296,8 @@
           title="Link to YouTube"
           target="_blank"
           rel="noreferrer"
-          className="text-base hover:text-red-600"
-          ><i class="m-2 fa-brands fa-youtube"></i
+          className="text-base"
+          ><i class="m-2 fa-brands fa-youtube hover:text-[#d6445a]"></i
         ></a>
         <a
           aria-label="{null}"
@@ -283,8 +305,8 @@
           title="Link to Amazon Music"
           target="_blank"
           rel="noreferrer"
-          className="text-base hover:text-black"
-          ><i class="m-2 fa-brands fa-amazon"></i
+          className="text-base "
+          ><i class="m-2 fa-brands fa-amazon hover:text-[#d6445a]"></i
         ></a>
       </div>
     </footer>
