@@ -1,11 +1,14 @@
-* {box-sizing:border-box}
+* {
+  box-sizing: border-box;
+}
 
 .img-text {
   text-shadow: 5px 5px 5px black;
 }
 
 /* Slideshow container */
-.slideshow-container, .video-container {
+.slideshow-container,
+.video-container {
   max-width: 98vw;
   position: relative;
   margin: auto;
@@ -13,13 +16,16 @@
 
 iframe {
   width: 90vw;
-  height: calc((9/16)*100vw);
+  height: calc((9 / 16) * 100vw);
+  border: 1px inset white;
+  border-radius: 0.4rem;
+  box-shadow: 1px 1px 10px 1px slategrey;
 }
 
-@media (min-aspect-ratio:16/9) {
+@media (min-aspect-ratio: 16/9) {
   iframe {
-      height: 95vh;
-      width: calc((16/9)*100vh);
+    height: 95vh;
+    width: calc((16 / 9) * 100vh);
   }
 }
 
@@ -68,8 +74,9 @@ iframe {
 /* Position the "next button" to the right */
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -104,17 +111,22 @@ iframe {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
