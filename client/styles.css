@@ -14,6 +14,10 @@
   margin: auto;
 }
 
+.calEvent {
+  border: 1px inset slategrey;
+}
+
 iframe {
   width: 90vw;
   height: calc((9 / 16) * 100vw);

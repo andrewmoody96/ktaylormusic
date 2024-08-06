@@ -6,10 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Ewert&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Caveat:wght@400..700&display=swap"
-      rel="stylesheet"
-      rel="stylesheet"
-    />
+    href="https://fonts.googleapis.com/css2?family=Ewert&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Caveat:wght@400..700&family=Fredericka+the+Great&display=swap"&display=swap"
+    rel="stylesheet" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
     <!-- replace during rebuild -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,6 +19,7 @@
               noto: ["Noto Serif", "serif"],
               ewert: ["Ewert", "serif"],
               caveat: ["Caveat", "cursive"],
+              fredericka: ["Fredericka the Great", "serif"],
             },
           },
           screens: {
@@ -53,10 +52,6 @@
           alt="Kolten Taylor & The Truck Toppers"
         />
       </div>
-      <!-- <div class="hidden tablet:block w-[33vw]"></div>
-      <div
-        class="tablet:hidden w-[98vw] bg-white h-[2px] text-center m-2"
-      ></div> -->
       <nav class="tablet:w-[33vw] text-center m-auto">
         <button class="p-2 m-2 hover:text-[#d6445a]">
           <a href="#about">About</a>
@@ -76,63 +71,120 @@
           src="./media/coverPhoto.jpg"
           alt="Kolten Taylor & The Truck Toppers"
         />
-        <h1
-          class="img-text absolute top-[25%] left=[50%] tablet:hidden w-[100vw] text-4xl text-center text-white font-ewert"
+        <div
+          class="img-text z absolute top-[17%] left=[50%] tablet:hidden w-[100vw]"
         >
-          Kolten Taylor<br /><span class="text-2xl font-caveat"
-            >& the Truck Toppers</span
-          >
-        </h1>
+          <h1 class="text-4xl text-center text-white font-ewert">
+            Kolten Taylor<br /><span class="text-2xl font-caveat"
+              >& the Truck Toppers</span
+            >
+          </h1>
+          <div class="w-[100vw] h-[7vh]"></div>
+          <div class="flex flex-row justify-evenly items-center">
+            <a
+              aria-label="{null}"
+              href="https://snd.click/gy6w"
+              title="Download Stageplot"
+              target="_blank"
+              rel="noreferrer"
+              ><button
+                class="border-2 bg-[#f3b477]/75 text-white rounded-lg p-1 m-2 shadow-[-5px_5px_23px_0_rgba(217,124,37,1)] font-fredericka hover:border-[rgba(46,30,15,1)] hover:text-[rgba(46,30,15,1)]"
+              >
+                "Good Time Bad"
+              </button></a
+            >
+            <a
+              aria-label="{null}"
+              href="https://songwhip.com/koltentaylor/neon-glow"
+              title="Download Stageplot"
+              target="_blank"
+              rel="noreferrer"
+              ><button
+                class="border-2 bg-[#653764]/80 text-white rounded-lg p-1 m-2 shadow-[5px_5px_24px_-0px_rgba(235,110,232,1)] font-fredericka hover:border-[rgba(235,110,232,1)] hover:text-[rgba(235,110,232,1)]"
+              >
+                "Neon Glow"
+              </button></a
+            >
+          </div>
+        </div>
       </div>
       <div class="hidden desktop:block slideshow-container mb-4 w-[100vw]">
-        <div class="coverSlides border-0 shadow-none fade">
-          <div class="hidden numbertext">1 / 6</div>
-          <img
-            class="w-[100%]"
-            src="./media/kt1.jpeg"
-            alt="Kolten Taylor & The Truck Toppers"
-          />
-        </div>
-        <div class="coverSlides border-0 shadow-none fade">
-          <div class="hidden numbertext">2 / 6</div>
-          <img
-            class="w-[100%]"
-            src="./media/tt1.jpg"
-            alt="Kolten Taylor & The Truck Toppers"
-          />
-        </div>
-        <div class="coverSlides border-0 shadow-none fade">
-          <div class="hidden numbertext">3 / 6</div>
-          <img
-            class="w-[100%]"
-            src="./media/kt3.jpg"
-            alt="Kolten Taylor & The Truck Toppers"
-          />
-        </div>
-        <div class="coverSlides border-0 shadow-none fade">
-          <div class="hidden numbertext">4 / 6</div>
-          <img
-            class="w-[100%]"
-            src="./media/zd1.jpg"
-            alt="Kolten Taylor & The Truck Toppers"
-          />
-        </div>
-        <div class="coverSlides border-0 shadow-none fade">
-          <div class="hidden numbertext">5 / 6</div>
-          <img
-            class="w-[100%]"
-            src="./media/kt2.jpg"
-            alt="Kolten Taylor & The Truck Toppers"
-          />
-        </div>
-        <div class="coverSlides border-0 shadow-none fade">
-          <div class="hidden numbertext">6 / 6</div>
-          <img
-            class="w-[100%]"
-            src="./media/tt2.jpg"
-            alt="Kolten Taylor & The Truck Toppers"
-          />
-        </div>
+        <>
+          <div class="coverSlides border-0 shadow-none fade">
+            <div class="hidden numbertext">1 / 6</div>
+            <img
+              class="w-[100%]"
+              src="./media/kt1.jpeg"
+              alt="Kolten Taylor & The Truck Toppers"
+            />
+          </div>
+          <div class="coverSlides border-0 shadow-none fade">
+            <div class="hidden numbertext">2 / 6</div>
+            <img
+              class="w-[100%]"
+              src="./media/tt1.jpg"
+              alt="Kolten Taylor & The Truck Toppers"
+            />
+          </div>
+          <div class="coverSlides border-0 shadow-none fade">
+            <div class="hidden numbertext">3 / 6</div>
+            <img
+              class="w-[100%]"
+              src="./media/kt3.jpg"
+              alt="Kolten Taylor & The Truck Toppers"
+            />
+          </div>
+          <div class="coverSlides border-0 shadow-none fade">
+            <div class="hidden numbertext">4 / 6</div>
+            <img
+              class="w-[100%]"
+              src="./media/zd1.jpg"
+              alt="Kolten Taylor & The Truck Toppers"
+            />
+          </div>
+          <div class="coverSlides border-0 shadow-none fade">
+            <div class="hidden numbertext">5 / 6</div>
+            <img
+              class="w-[100%]"
+              src="./media/kt2.jpg"
+              alt="Kolten Taylor & The Truck Toppers"
+            />
+          </div>
+          <div class="coverSlides border-0 shadow-none fade">
+            <div class="hidden numbertext">6 / 6</div>
+            <img
+              class="w-[100%]"
+              src="./media/tt2.jpg"
+              alt="Kolten Taylor & The Truck Toppers"
+            />
+          </div>
+        </>
+      </div>
+      <div class="hidden tablet:block my-4">
+        <a
+          aria-label="{null}"
+          href="https://snd.click/gy6w"
+          title="Download Stageplot"
+          target="_blank"
+          rel="noreferrer"
+          ><button
+            class="border-2 bg-[#f3b477]/75 text-white rounded-lg p-1 m-2 shadow-[-5px_5px_23px_0_rgba(217,124,37,1)] font-fredericka hover:border-[rgba(46,30,15,1)] hover:text-[rgba(46,30,15,1)]"
+          >
+            "Good Time Bad"
+          </button></a
+        >
+        <a
+          aria-label="{null}"
+          href="https://songwhip.com/koltentaylor/neon-glow"
+          title="Download Stageplot"
+          target="_blank"
+          rel="noreferrer"
+          ><button
+            class="border-2 bg-[#653764]/80 text-white rounded-lg p-1 m-2 shadow-[5px_5px_24px_-0px_rgba(235,110,232,1)] font-fredericka hover:border-[rgba(235,110,232,1)] hover:text-[rgba(235,110,232,1)]"
+          >
+            "Neon Glow"
+          </button></a
+        >
       </div>
       <section
         id="about"
@@ -213,8 +265,15 @@
         <div class="hidden desktop:block video-container mb-4">
           <iframe
             class="w-[45vw] h-[33vh]"
-            src="https://www.youtube.com/embed/LMHlhLwYuIY?si=eS_dIZR-UcS1WS3g?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-          ></iframe>
+            src="https://www.youtube.com/embed/LMHlhLwYuIY?si=eS_dIZR-UcS1WS3g?autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          >
+            ></iframe
+          >
         </div>
       </section>
       <section
@@ -224,7 +283,12 @@
         <div class="video-container desktop:hidden mx-10 mb-4">
           <iframe
             class="w-[85vw]"
-            src="https://www.youtube.com/embed/LMHlhLwYuIY?si=eS_dIZR-UcS1WS3g?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+            src="https://www.youtube.com/embed/LMHlhLwYuIY?si=eS_dIZR-UcS1WS3g?autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
           ></iframe>
         </div>
         <div class="m-2">
@@ -234,34 +298,34 @@
           >
           <ul class="text-[1rem] grid grid-cols-1 w-[75vw] desktop:w-[35vw]">
             <li
-              class="bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)]"
+              class="calEvent bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)] shadow-[1px_1px_10px_-0px_rgba(255,255,255,1)]"
             >
               Aug 10 @ 5PM<br />IL State Fair<br />Apex Stage<br />Springfield,
               IL
             </li>
             <li
-              class="bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)]"
+              class="calEvent bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)] shadow-[2px_0px_5px_-0px_rgba(255,255,255,1)]"
             >
               Aug 18 @ 2PM<br />Alto Vineyards<br />Sunday Winedown<br />Champaign,
               IL
             </li>
             <li
-              class="bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)]"
+              class="calEvent bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)] shadow-[2px_0px_5px_-0px_rgba(255,255,255,1)]"
             >
-              Aug 24<br />Ogden Street Fest<br />Ogden, IL
+              Aug 24 @ 7PM<br />Ogden Street Fest<br />Ogden, IL
             </li>
             <li
-              class="bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)]"
+              class="calEvent bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)] shadow-[2px_0px_5px_-0px_rgba(255,255,255,1)]"
             >
               Sep 1 @ 7PM<br />Exit 210 Saloon<br />Oakwood, IL
             </li>
             <li
-              class="bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)]"
+              class="calEvent bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)] shadow-[2px_0px_5px_-0px_rgba(255,255,255,1)]"
             >
               Sep 7 @ 6PM<br />Thirty-Six Saloon<br />Rockville, IN
             </li>
             <li
-              class="bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)]"
+              class="calEvent bg-white border-2 border-red 600 rounded-md text-black m-2 drop-shadow-[0_1px_5px_rgba(255,255,255,0.7)] shadow-[2px_0px_5px_-0px_rgba(255,255,255,1)]"
             >
               Sep 20 @ 8PM<br />Bargenta<br />Argenta, IL
             </li>
