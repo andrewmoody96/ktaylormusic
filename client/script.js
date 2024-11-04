@@ -11,8 +11,10 @@ function showGallerySlides() {
     slides[i].style.display = "none";
   }
   galleryIndex++;
-  if (galleryIndex > slides.length) {galleryIndex = 1}
-  slides[galleryIndex-1].style.display = "block";
+  if (galleryIndex > slides.length) {
+    galleryIndex = 1;
+  }
+  slides[galleryIndex - 1].style.display = "block";
   setTimeout(showGallerySlides, 3500); // Change image every 3.5 seconds
 }
 
@@ -23,7 +25,29 @@ function showCoverSlides() {
     slides[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
   setTimeout(showCoverSlides, 3500); // Change image every 3.5 seconds
+}
+
+// BANNER TOGGLE
+
+function toggleBanner() {
+  let unwindBanner = document.getElementById("unwindBanner");
+  let showBanner = document.getElementById("showUnwind");
+
+  let bannerClasses = Array.from(unwindBanner.classList);
+  let buttonClasses = Array.from(showBanner.classList);
+
+  console.log(`${bannerClasses} ||| ${buttonClasses}`);
+
+  if (bannerClasses.includes("hidden") === false) {
+    unwindBanner.classList.add("hidden");
+    showBanner.classList.remove("hidden");
+  } else {
+    unwindBanner.classList.remove("hidden");
+    showBanner.classList.remove("hidden");
+  }
 }

@@ -40,6 +40,12 @@ iframe {
   border-radius: 0.4rem;
   box-shadow: 1px 1px 10px 1px slategrey;
 }
+.coverSlides {
+  display: none;
+  border: 1px inset white;
+  border-radius: 0.4rem;
+  box-shadow: 1px 1px 10px 1px slategrey;
+}
 
 /* Next & previous buttons */
 .prev {
