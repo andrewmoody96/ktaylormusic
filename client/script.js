@@ -32,10 +32,27 @@ function showCoverSlides() {
   setTimeout(showCoverSlides, 3500); // Change image every 3.5 seconds
 }
 
-// BANNER TOGGLE
-
+// BANNER TOGGLES
 function toggleBanner() {
   let unwindBanner = document.getElementById("unwindBanner");
+  let showBanner = document.getElementById("showUnwind");
+
+  let bannerClasses = Array.from(unwindBanner.classList);
+  let buttonClasses = Array.from(showBanner.classList);
+
+  console.log(`${bannerClasses} ||| ${buttonClasses}`);
+
+  if (bannerClasses.includes("hidden") === false) {
+    unwindBanner.classList.add("hidden");
+    showBanner.classList.remove("hidden");
+  } else {
+    unwindBanner.classList.remove("hidden");
+    showBanner.classList.remove("hidden");
+  }
+}
+
+function toggleMobileBanner() {
+  let unwindBanner = document.getElementById("unwindBannerMobile");
   let showBanner = document.getElementById("showUnwind");
 
   let bannerClasses = Array.from(unwindBanner.classList);
