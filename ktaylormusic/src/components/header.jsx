@@ -1,12 +1,14 @@
+import KTlogo from "../assets/KTlogo.jpg"
+
 export default function Header() {
-    return (
-        <header className="flex justify-center items-center">
-      <h1
-        className="hidden tablet:block tablet:w-[33vw] text-2xl text-center text-white mt-4 font-ewert"
-      >
-        Kolten Taylor<br /><span className="font-caveat text-xl font-caveat"
-          >& the Truck Toppers</span
-        >
+  return (
+    <header className="flex justify-center items-center bg-black text-white font-noto">
+      <h1 className="hidden tablet:block tablet:w-[33vw] text-2xl text-center text-white mt-4 font-ewert">
+        Kolten Taylor
+        <br />
+        <span className="text-xl font-caveat">
+          & the Truck Toppers
+        </span>
       </h1>
       <div className="tablet:w-[33vw] tablet:m-auto">
         <a
@@ -17,7 +19,7 @@ export default function Header() {
         >
           <img
             className="w-[20vw] tablet:w-[10vw] h-auto tablet:m-auto"
-            src="./media/Kolten Taylor-16.jpg"
+            src={KTlogo}
             alt="Kolten Taylor & The Truck Toppers"
           />
         </a>
@@ -34,5 +36,5 @@ export default function Header() {
         </button>
       </nav>
     </header>
-    )
+  );
 }
