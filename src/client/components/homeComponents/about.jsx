@@ -9,7 +9,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="text-center text-[0.8rem] tablet:text-[1rem] mb-10 w-[100vw] tablet:w-[60vw] desktop:w-[100vw] mx-4 flex flex-col desktop:flex-row justify-center items-center mx-auto"
+      className="text-center text-[0.8rem] tablet:text-[1rem] mb-10 w-[100vw] tablet:w-[60vw] desktop:w-[100vw] flex flex-col desktop:flex-row justify-center items-center mx-auto"
     >
       <div className="mx-10 mb-4 w-[100vw] desktop:hidden">
         <div className="mySlides fade">
@@ -80,16 +80,6 @@ export default function About() {
         and heartfelt lyrics resonate deeply with listeners, capturing audiences
         with relatability and the band&apos;s raw performances.
       </p>
-      {/* <div className="hidden desktop:block max-w-[45vw] mb-10">
-        <iframe
-          className="h-auto"
-          src="https://www.youtube.com/embed/LMHlhLwYuIY?si=eS_dIZR-UcS1WS3g?autoplay=1&mute=1"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
-      </div> */}
     </section>
   );
 }
