@@ -1,0 +1,42 @@
+{
+  "name": "KT-Music.VITE",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server/server.js -w src/server",
+    "start": "NODE_ENV=production cd src/server && npm start",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@fontsource-variable/caveat": "^5.1.1",
+    "@fontsource/ewert": "^5.1.1",
+    "@fontsource/fredericka-the-great": "^5.1.1",
+    "@fontsource/open-sans": "^5.1.1",
+    "@tailwindcss/postcss": "^4.0.3",
+    "@tailwindcss/vite": "^4.0.3",
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "google-auth-library": "^9.15.1",
+    "googleapis": "^144.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.1.5",
+    "vite-express": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^4.2.0",
+    "autoprefixer": "^10.4.20",
+    "nodemon": "^3.0.1",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.3",
+    "vite": "^5.4.14"
+  }
+}
