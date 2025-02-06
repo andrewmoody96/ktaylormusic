@@ -7,9 +7,7 @@ export default function Event({ description }) {
   let location = description[3];
   let url = description[4];
   let length = description.length;
-
-  console.log(description);
-
+  
   return (
     <div className="flex flex-col w-[80vw] tablet:w-[50vw] desktop:w-[30vw]">
       <div className="m-2 px-2 rounded-2xl shadow-[inset_0_1px_5px_0_rgb(0,0,0);] items-center bg-[#d6445a]/90 border-4 border-black">

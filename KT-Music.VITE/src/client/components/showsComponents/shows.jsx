@@ -21,13 +21,10 @@ let url = null;
 // Event Renderer - renders based on presence of event URL
 const eventLoader = (url) => {
   if (url === "null") {
-    console.log("NULL");
     return (
       <Event className="w-[75vw]" description={[date, name, time, location]} />
     );
   } else {
-    console.log("NOT NULL");
-    console.log(url);
     return (
       <Event
         className="w-[75vw]"
