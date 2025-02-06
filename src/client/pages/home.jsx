@@ -8,7 +8,6 @@ import photoSlideShow from "../scripts/slideshow.cjs";
 import FeaturedMusic from "../components/homeComponents/featuredMusic";
 
 export default function Home() {
-  // ISSUE
   useEffect(() => {
     photoSlideShow();
   }, []);
@@ -50,5 +49,6 @@ export default function Home() {
         <Contact />
       </section>
     </main>
-  );ƒ
+  );
+  ƒ;
 }

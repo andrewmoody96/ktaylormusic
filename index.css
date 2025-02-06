@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme {
- --font-noto: "Noto Serif", sans-serif;
- --font-ewert: "Ewert", serif;
- --font-caveat: "Caveat", cursive; 
- --font-fredericka: "Fredericka the Great", serif;
- --breakpoint-tablet: 760px;
- --breakpoint-desktop: 950px;
- --breakpoint-wide: 1200px;
+  --font-noto: "Noto Serif", sans-serif;
+  --font-ewert: "Ewert", serif;
+  --font-caveat: "Caveat", cursive;
+  --font-fredericka: "Fredericka the Great", serif;
+  --breakpoint-tablet: 760px;
+  --breakpoint-desktop: 950px;
+  --breakpoint-wide: 1200px;
 }
 
 * {

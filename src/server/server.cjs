@@ -44,7 +44,7 @@ app.get("/api/shows", (req, res) => {
           } else {
             if (result.data.items.length) {
               res.send(JSON.stringify({ events: result.data.items }));
-              console.log('\u001b[32m' + 'Events sent to frontend.');
+              console.log("\u001b[32m" + "Events sent to frontend.");
             } else {
               res.send(
                 JSON.stringify({ message: "No upcoming events found." })
@@ -54,21 +54,6 @@ app.get("/api/shows", (req, res) => {
           }
         }
       );
-      // let eventData = response.data.items;
-      // let events = [];
-
-      // eventData.forEach((event) => {
-      //   // let eObj = {
-      //   //   title: event.summary,
-      //   //   start: event.start,
-      //   //   end: event.end,
-      //   //   id: event.id,
-      //   //   description: event.description,
-      //   // };
-      //   events.push(event);
-      // });
-      // // Send data.
-      // res.send(events);
     }
 
     main().catch((e) => {
@@ -76,35 +61,13 @@ app.get("/api/shows", (req, res) => {
       throw e;
     });
   }
-  // calendar.events.list(
-  //   {
-  //     calendarId: GCAL_ID,
-  //     timeMin: new Date().toISOString(),
-  //     maxResults: 6,
-  //     singleEvents: true,
-  //     orderBy: "startTime",
-  //   },
-  //   (error, result) => {
-  //     if (error) {
-  //       res.send(JSON.stringify({ error: error }));
-  //     } else {
-  //       if (result.data.items.length) {
-  //         res.send(JSON.stringify({ events: result.data.items }));
-  //       } else {
-  //         res.send(JSON.stringify({ message: "No upcoming events found." }));
-  //       }
-  //     }
-  //   }
-  // );
 });
 
 // Root Route
 app.use(express.static(path.join(__dirname, "../../dist")));
 
 // 404 Route
-// app.get("/*", (req, res) => {
-//   res.send("404 NOT FOUND")
-// })
+// CREATE NOT FOUND PAGE
 
 ViteExpress.listen(app, PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`);

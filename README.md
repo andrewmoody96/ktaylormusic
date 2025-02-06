@@ -6,8 +6,6 @@
 - Contact Info
 - Links to Music & Socials
 
-### IN THIS COMMIT (8/5/2024):
-- tablet/desktop layout complete
-- stageplot download link works correctly
-- new featured video
-- Buttons with links to streaming
+### IN THIS COMMIT (2/6/2025):
+- the site has been ported to Vite/Express
+- better intergration with band's G Calendar for easier show updates
