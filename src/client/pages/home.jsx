@@ -8,7 +8,6 @@ import photoSlideShow from "../scripts/slideshow.cjs";
 import FeaturedMusic from "../components/homeComponents/featuredMusic";
 
 export default function Home() {
-  // ISSUE
   useEffect(() => {
     photoSlideShow();
   }, []);
