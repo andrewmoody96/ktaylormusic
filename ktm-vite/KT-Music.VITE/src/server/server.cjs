@@ -44,10 +44,12 @@ app.get("/api/shows", (req, res) => {
           } else {
             if (result.data.items.length) {
               res.send(JSON.stringify({ events: result.data.items }));
+              console.log('\u001b[32m' + 'Events sent to frontend.');
             } else {
               res.send(
                 JSON.stringify({ message: "No upcoming events found." })
               );
+              console.warn("No upcoming events found.");
             }
           }
         }
@@ -67,7 +69,6 @@ app.get("/api/shows", (req, res) => {
       // });
       // // Send data.
       // res.send(events);
-      console.log("Events sent to frontend.");
     }
 
     main().catch((e) => {

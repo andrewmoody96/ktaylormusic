@@ -47,41 +47,37 @@ export default function Shows() {
         const res = await fetch("/api/shows");
         const jsonData = await res.json();
 
-
-        console.log(jsonData);
-        
-
         if (!jsonData) {
           console.error("load failed");
           setIsUpcoming(false);
         } else {
-          console.log("load successful");
-          let eventObj = jsonData.events;
+          if (jsonData.message === "No upcoming events found.") {
+            setIsUpcoming(false);
+            console.log("No events found");
+          } else {
+            console.log("Events found");
+            let eventObj = jsonData.events;
+            const events = Object.keys(eventObj).map((key) => eventObj[key]);
+            let upcoming = [];
+            let getNow = dayjs.utc().toISOString();
+            let now = getNow.slice(".");
 
-          console.log(eventObj);
+            events.forEach((event) => {
+              let end = dayjs(event.end.dateTime).toISOString();
+              let compare = dayjs(now).isAfter(end);
 
-          const events = Object.keys(eventObj).map((key) => eventObj[key]);
-          // console.log(events);
-
-          let upcoming = [];
-          let getNow = dayjs.utc().toISOString();
-          let now = getNow.slice(".");
-
-          events.forEach((event) => {
-            let end = dayjs(event.end.dateTime).toISOString();
-            let compare = dayjs(now).isAfter(end);
-
-            if (compare === false) {
-              upcoming.push(event);
-              setEvents(upcoming);
-              setIsUpcoming(true);
-            } else {
-              setIsUpcoming(false);
-            }
-          });
+              if (compare === false) {
+                upcoming.push(event);
+                setEvents(upcoming);
+                setIsUpcoming(true);
+              } else {
+                setIsUpcoming(false);
+              }
+            });
+          }
         }
       } catch (error) {
-        console.error(`The big goof... ${error}`);
+        console.error(error);
       }
     };
     fetchEvents();
@@ -90,17 +86,27 @@ export default function Shows() {
   return (
     <>
       {!isUpcoming ? (
-        <div className="flex flex-col justify-center items-center desktop:w-[45vw]">
-          <div className="h-[10vh] invisible">dummy div for spacing</div>
-          <div className="w-100 desktop:w-[45vw] bg-white/90 rounded-lg justify-center text-center">
-            <h2 className="flex flex-col w-auto font-moda text-xl text-center visible p-2">
-              No upcoming events.
-            </h2>
+        <div className="text-center text-[0.8rem] tablet:text-[1rem] m-2 mb-20 w-fit desktop:w-[35vw] desktop:self-start flex flex-col justify-center items-center">
+          <span
+            id="shows"
+            className="headingFredericka text-[1.5rem] tablet:text-[2rem] m-2 underline"
+          >
+            Upcoming Shows
+          </span>
+          <div className="flex flex-col justify-center items-center desktop:w-[45vw]">
+            <div className="w-[98vw] desktop:w-[45vw] justify-center text-center">
+              <h2 className="flex flex-col w-auto font-moda text-xl text-center visible p-2">
+                No upcoming events.
+              </h2>
+            </div>
           </div>
         </div>
       ) : (
         <div className="text-center text-[0.8rem] tablet:text-[1rem] m-2 mb-20 w-fit desktop:w-[35vw] desktop:self-start flex flex-col justify-center items-center">
-          <span id="shows" className="headingFredericka text-[1.5rem] tablet:text-[2rem] m-2 underline">
+          <span
+            id="shows"
+            className="headingFredericka text-[1.5rem] tablet:text-[2rem] m-2 underline"
+          >
             Upcoming Shows
           </span>
           {/* only display in col view if events.length < 1? */}
