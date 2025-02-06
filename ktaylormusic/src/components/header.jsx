@@ -1,4 +1,4 @@
-import KTlogo from "../assets/KTlogo.jpg"
+import KTlogo from "../assets/KTlogo.jpg";
 
 export default function Header() {
   return (
@@ -6,9 +6,7 @@ export default function Header() {
       <h1 className="hidden tablet:block tablet:w-[33vw] text-2xl text-center text-white mt-4 font-ewert">
         Kolten Taylor
         <br />
-        <span className="text-xl font-caveat">
-          & the Truck Toppers
-        </span>
+        <span className="text-xl font-caveat">& the Truck Toppers</span>
       </h1>
       <div className="tablet:w-[33vw] tablet:m-auto">
         <a

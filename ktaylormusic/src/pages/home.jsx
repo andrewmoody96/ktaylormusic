@@ -3,7 +3,7 @@ import coverPhoto from "../assets/coverPhoto.jpg";
 import About from "../components/homeComponents/about";
 import Contact from "../components/homeComponents/contact";
 import Slideshow from "../components/homeComponents/slideShow";
-import Shows from "../components/showsComponents/upcomingShows";
+import Shows from "../components/showsComponents/shows";
 import photoSlideShow from "../scripts/slideshow";
 import FeaturedMusic from "../components/homeComponents/featuredMusic";
 
