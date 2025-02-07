@@ -43,7 +43,7 @@ const jwt = new google.auth.JWT(
 
 const calendar = google.calendar({
   version: "v3",
-  project: process.hasUncaughtExceptionCaptureCallback.GOOGLE_PROJECT_NUMBER,
+  project: process.env.GOOGLE_PROJECT_NUMBER,
   auth: jwt,
 });
 
@@ -103,6 +103,10 @@ app.use(express.static(path.join(__dirname, "../../dist")));
 // 404 Route
 // BUILD 404 PAGE
 
-ViteExpress.listen(app, process.env.PORT, () => {
+// app.listen(app, process.env.PORT | 3001, () => {
+//   console.log(`Server listening at http://localhost:${PORT}`);
+// });
+
+app.listen(process.env.PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`);
 });
