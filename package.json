@@ -14,10 +14,12 @@
     "@fontsource/fredericka-the-great": "^5.1.1",
     "@tailwindcss/vite": "^4.0.3",
     "dayjs": "^1.11.13",
+    "express": "^4.21.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^7.1.5"
+    "react-router-dom": "^7.1.5",
+    "vite-express": "^0.20.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.0",
