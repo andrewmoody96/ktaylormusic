@@ -67,8 +67,7 @@ app.get("/api/shows", (req, res) => {
         },
         (error, result) => {
           if (error) {
-            console.log("Error though...");
-
+            console.error(error);
             res.send(JSON.stringify({ error: error }));
           } else {
             if (result.data.items.length) {
