@@ -90,6 +90,6 @@ app.use(express.static(path.join(__dirname, "../../dist")));
 // 404 Route
 // BUILD 404 PAGE
 
-app.listen(process.env.PORT | 3001, () => {
+app.listen(process.env.PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`);
 });
