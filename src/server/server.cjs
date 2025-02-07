@@ -29,10 +29,12 @@ const GoogleServiceAccountKeys = JSON.parse(
   Buffer.from(process.env.GOOGLE_KEYS, "base64").toString()
 );
 
+// console.log(GoogleServiceAccountKeys);
+
 const jwt = new google.auth.JWT(
-  process.env.GOOGLE_CLIENT_EMAIL,
+  GoogleServiceAccountKeys.client_email,
   null,
-  process.env.GOOGLE_PRIVATE_KEY,
+  GoogleServiceAccountKeys.private_key,
   [
     "https://www.googleapis.com/auth/calendar.events.readonly",
     "https://www.googleapis.com/auth/calendar.readonly",
