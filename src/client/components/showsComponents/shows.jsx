@@ -43,7 +43,6 @@ export default function Shows() {
       try {
         const res = await fetch("/api/shows");
         const jsonData = await res.json();
-
         if (!jsonData) {
           console.error("load failed");
           setIsUpcoming(false);
@@ -53,6 +52,7 @@ export default function Shows() {
             console.log("No events found");
           } else {
             console.log("Events found");
+
             let eventObj = jsonData.events;
             const events = Object.keys(eventObj).map((key) => eventObj[key]);
             let upcoming = [];

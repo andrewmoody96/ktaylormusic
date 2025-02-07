@@ -11,14 +11,43 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 const { google } = require("googleapis");
-const calendar = google.calendar("v3");
+// const calendar = google.calendar("v3");
 const GCAL_ID = process.env.REACT_APP_GCAL_ID;
+const gcsCredentials = {
+  type: "service_account",
+  project_id: "ktaylormusic-site",
+  private_key_id: process.env.GOOGLE_PRIVATE_KEY_ID,
+  private_key: process.env.GOOGLE_PRIVATE_KEY.split(String.raw`\n`).join("\n"),
+  client_email: process.env.GOOGLE_CLIENT_EMAIL,
+  client_id: process.env.GOOGLE_CLIENT_ID,
+  auth_uri: "https://accounts.google.com/o/oauth2/auth",
+  token_uri: "https://oauth2.googleapis.com/token",
+  auth_provider_x509_cert_url: process.env.GOOGLE_AUTH_PROVIDER_X509,
+  client_x509_cert_url: process.env.GOOGLE_CLIENT_X509,
+};
+
+const jwt = new google.auth.JWT(
+  process.env.GOOGLE_CLIENT_EMAIL,
+  null,
+  process.env.GOOGLE_PRIVATE_KEY,
+  [
+    "https://www.googleapis.com/auth/calendar.events.readonly",
+    "https://www.googleapis.com/auth/calendar.readonly",
+  ]
+);
+
+const calendar = google.calendar({
+  version: "v3",
+  project: process.hasUncaughtExceptionCaptureCallback.GOOGLE_PROJECT_NUMBER,
+  auth: jwt,
+});
 
 app.get("/api/shows", (req, res) => {
   {
     async function main() {
       const auth = new google.auth.GoogleAuth({
         // Scopes can be specified either as an array or as a single, space-delimited string.
+        credentials: gcsCredentials,
         scopes: [
           "https://www.googleapis.com/auth/calendar.events.readonly",
           "https://www.googleapis.com/auth/calendar.readonly",
@@ -27,9 +56,9 @@ app.get("/api/shows", (req, res) => {
 
       // Acquire an auth client, and bind it to all future calls
       const authClient = await auth.getClient();
+      console.log("Made it.");
       google.options({ auth: authClient });
 
-      // Do the magic
       const response = await calendar.events.list(
         {
           calendarId: GCAL_ID,
@@ -40,6 +69,8 @@ app.get("/api/shows", (req, res) => {
         },
         (error, result) => {
           if (error) {
+            console.log("Error though...");
+
             res.send(JSON.stringify({ error: error }));
           } else {
             if (result.data.items.length) {
