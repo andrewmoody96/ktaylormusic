@@ -11,7 +11,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 const { google } = require("googleapis");
-// const calendar = google.calendar("v3");
 const GCAL_ID = process.env.REACT_APP_GCAL_ID;
 const gcsCredentials = {
   type: "service_account",
@@ -56,7 +55,6 @@ app.get("/api/shows", (req, res) => {
 
       // Acquire an auth client, and bind it to all future calls
       const authClient = await auth.getClient();
-      console.log("Made it.");
       google.options({ auth: authClient });
 
       const response = await calendar.events.list(
@@ -100,6 +98,6 @@ app.use(express.static(path.join(__dirname, "../../dist")));
 // 404 Route
 // BUILD 404 PAGE
 
-ViteExpress.listen(app, PORT, () => {
+ViteExpress.listen(app, process.env.PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`);
 });
