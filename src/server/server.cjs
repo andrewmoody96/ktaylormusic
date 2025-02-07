@@ -61,7 +61,7 @@ app.get("/api/shows", (req, res) => {
       const authClient = await auth.getClient();
       google.options({ auth: authClient });
 
-      const response = await calendar.events.list(
+      await calendar.events.list(
         {
           calendarId: GCAL_ID,
           timeMin: new Date().toISOString(),
