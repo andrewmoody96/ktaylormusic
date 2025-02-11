@@ -1,9 +1,9 @@
-import KT1 from "../../assets/kt1.jpeg";
-import KT2 from "../../assets/kt2.jpg";
-import KT3 from "../../assets/kt3.jpg";
-import TT1 from "../../assets/tt1.jpg";
-import TT2 from "../../assets/tt2.jpg";
-import ZD1 from "../../assets/zd1.jpg";
+import KT1 from "../../assets/kt1.webp";
+import KT2 from "../../assets/kt2.webp";
+import KT3 from "../../assets/kt3.webp";
+import TT1 from "../../assets/tt1.webp";
+import TT2 from "../../assets/tt2.webp";
+import ZD1 from "../../assets/zd1.webp";
 
 export default function About() {
   return (

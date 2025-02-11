@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import coverPhoto from "../assets/coverPhoto.jpg";
+import coverPhoto from "../assets/coverPhoto.webp";
 import About from "../components/homeComponents/about";
 import Contact from "../components/homeComponents/contact";
 import Slideshow from "../components/homeComponents/slideShow";
@@ -16,6 +16,8 @@ export default function Home() {
     <main className="flex flex-col justify-center items-center bg-black text-white">
       <div className="desktop:hidden flex justify-center relative mb-4">
         <img
+          width="6721px"
+          height="4480px"
           className="mt-5 m-auto w-[100vw] h-auto tablet:w-[85vw]"
           src={coverPhoto}
           alt="Kolten Taylor & The Truck Toppers"

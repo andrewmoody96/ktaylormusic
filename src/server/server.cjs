@@ -1,12 +1,23 @@
 const express = require("express");
 require("dotenv").config({ path: "../../.env" });
 const app = express();
+const router = express.Router();
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const cors = require("cors");
 const corsOptions = {
   origin: `http://localhost:${PORT}`,
 };
+
+// const sharp = require("sharp");
+// const fs = require("fs");
+// const directory = "../client/assets";
+
+// fs.readdirSync(directory).forEach((file) => {
+//   sharp(`${directory}/${file}`)
+//     .resize(200, 100) // width, height
+//     .toFile(`${directory}/${file}-small.jpg`);
+// });
 
 app.use(cors(corsOptions));
 const { google } = require("googleapis");
@@ -15,8 +26,6 @@ const GCAL_ID = process.env.REACT_APP_GCAL_ID;
 const GoogleServiceAccountKeys = JSON.parse(
   Buffer.from(process.env.GOOGLE_KEYS, "base64").toString()
 );
-
-// console.log(GoogleServiceAccountKeys);
 
 const jwt = new google.auth.JWT(
   GoogleServiceAccountKeys.client_email,
@@ -34,6 +43,15 @@ const calendar = google.calendar({
   auth: jwt,
 });
 
+app.use(express.static(path.join(__dirname, "../../dist")));
+
+// Root Route
+app.get("/", (req, res) => {
+  console.log("YAY");
+  res.sendFile(path.join(__dirname, "../../dist"));
+});
+
+// GCal API Route
 app.get("/api/shows", (req, res) => {
   {
     async function main() {
@@ -84,11 +102,15 @@ app.get("/api/shows", (req, res) => {
   }
 });
 
-// Root Route
-app.use(express.static(path.join(__dirname, "../../dist")));
-
 // 404 Route
-// BUILD 404 PAGE
+app.get("/*", function (req, res) {
+  console.error(`404 - Not Found`);
+  res.sendFile(path.join(__dirname, "../../dist/index.html"), function (err) {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
+});
 
 app.listen(process.env.PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`);

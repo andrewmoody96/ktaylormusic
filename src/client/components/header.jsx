@@ -1,4 +1,4 @@
-import KTlogo from "../assets/KTlogo.jpg";
+import KTlogo from "../assets/KTlogo.webp";
 
 export default function Header() {
   return (
@@ -16,7 +16,9 @@ export default function Header() {
           className="hover:border-2 hover:border-[#]"
         >
           <img
-            className="w-[20vw] tablet:w-[15vw] h-auto tablet:m-auto"
+            className="max-w-[20vw] w-[20vw] tablet:w-[15vw] h-auto tablet:m-auto"
+            width="288"
+            height="288"
             src={KTlogo}
             alt="Kolten Taylor & The Truck Toppers"
           />

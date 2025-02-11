@@ -6,10 +6,15 @@ import path from "path";
 // https://vitejs.dev/config/
 
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      external: ["sharp"],
+    },
+  },
   server: {
     proxy: {
-      "/api/*" : "http://localhost:5001/"
-    }
+      "/api/*": "http://localhost:5001/",
+    },
   },
   plugins: [react(), tailwindcss()],
   resolve: {
