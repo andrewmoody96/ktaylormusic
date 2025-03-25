@@ -9,16 +9,6 @@ const corsOptions = {
   origin: `http://localhost:${PORT}`,
 };
 
-// const sharp = require("sharp");
-// const fs = require("fs");
-// const directory = "../client/assets";
-
-// fs.readdirSync(directory).forEach((file) => {
-//   sharp(`${directory}/${file}`)
-//     .resize(200, 100) // width, height
-//     .toFile(`${directory}/${file}-small.jpg`);
-// });
-
 app.use(cors(corsOptions));
 const { google } = require("googleapis");
 const GCAL_ID = process.env.REACT_APP_GCAL_ID;
