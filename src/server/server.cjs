@@ -94,9 +94,9 @@ app.get("/api/shows", (req, res) => {
 
 // 404 Route
 app.get("/*", function (req, res) {
-  console.error(`404 - Not Found`);
   res.sendFile(path.join(__dirname, "../../dist/index.html"), function (err) {
     if (err) {
+      console.error(`404 - Not Found`);
       res.status(500).send(err);
     }
   });
